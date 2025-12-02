@@ -30,8 +30,8 @@ This worker consumes the `queue.balance.calculation-requests` queue managed by N
 ```mermaid
 graph LR
     subgraph "Triggers"
-        Make[NovaMake (Job Done)] -->|1. Event: Material + Energy Used| MQ[(RabbitMQ)]
-        Mat[NovaMaterial (New Design)] -->|1. Event: BOM| MQ
+        Make["NovaMake (Job Done)"] -->|1. Event: Material + Energy Used| MQ[(RabbitMQ)]
+        Mat["NovaMaterial (New Design)"] -->|1. Event: BOM| MQ
     end
 
     subgraph "The Worker (NovaBalance)"
